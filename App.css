@@ -1,0 +1,271 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff; /* Light mode default */
+  color: #000;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px; /* Offset for fixed navbar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #e5e5e5;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%; /* Full screen width */
+  background: linear-gradient(
+    90deg,
+    rgba(51, 42, 155, 1) 0%,
+    rgba(87, 136, 199, 1) 50%,
+    rgba(101, 216, 95, 1) 100%
+  );
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Buttons on the right */
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar button:hover,
+.navbar button:focus {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Dark mode for buttons */
+.app.dark .navbar button {
+  background-color: #333;
+  color: #fff;
+}
+
+.app.dark .navbar button:hover {
+  background-color: #555;
+}
+
+/* ================= BLOG FORM ================= */
+.blog-form {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark .blog-form {
+  background-color: #1f1f1f;
+  color: #e5e5e5;
+}
+
+.blog-form input,
+.blog-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.app.dark .blog-form input,
+.app.dark .blog-form textarea {
+  background-color: #2a2a2a;
+  color: #e5e5e5;
+  border: 1px solid #555;
+}
+
+.blog-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blog-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ================= BLOG LIST ================= */
+.blog-list {
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.blog-post {
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  background-color: #ffffff;
+}
+
+.blog-post h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.blog-post p {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 15px;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.app.dark .blog-post {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.app.dark .blog-post h2 {
+  color: #4da6ff;
+}
+
+.app.dark .blog-post p {
+  color: #ccc;
+}
+
+/* ================= POST ACTION BUTTONS ================= */
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.post-actions button:first-child {
+  background-color: #ffc107;
+  color: #d43f3a;
+}
+
+.post-actions button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.post-actions button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.post-actions button:last-child:hover {
+  background-color: #c82333;
+}
+
+.app.dark .post-actions button:first-child {
+  background-color: #f5c842;
+  color: #000;
+}
+
+.app.dark .post-actions button:last-child {
+  background-color: #ff4d4f;
+}
+
+/* ================= NO POSTS ================= */
+.no-posts {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark .no-posts {
+  background: #1f1f1f;
+  color: #ccc;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-buttons {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .navbar h1 {
+    font-size: 22px;
+  }
+
+  .blog-form {
+    max-width: 90%;
+  }
+
+  .blog-post {
+    padding: 18px;
+  }
+}

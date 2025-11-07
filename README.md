@@ -1,13 +1,12 @@
-# Blog-App
-A fast, responsive Single Page Application (SPA) blogging platform built with React.
+# React + Vite
 
-✨ Features:-
-1. SPA Performance: Dynamic loading via React for a smooth user experience.
-2. Responsive UI: Optimized design for all screen sizes.
-3. Authentication: Secure sign-up and login for authors.
-4. Rich Editor: Easy post creation and editing.
-5. Search & Tags: Efficient content organization and discovery.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
- 💻 Stack:-
-Frontend: React (with [e.g., React Router DOM] and [e.g., Tailwind CSS]).
-Backend: [Specify, e.g., Node.js/Express, or Firebase].
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
